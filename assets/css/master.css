@@ -55,7 +55,6 @@ a{
 
 img{
     width: 100%;
-    aspect-ratio: 1;
 }
 
 button:focus {
@@ -78,10 +77,6 @@ button:focus {
     --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
 }
 
-.min-width {
-    min-width: 300px;
-}
-
 .red-color{
     color: hsl(14, 86%, 42%);
 }
@@ -90,67 +85,89 @@ button:focus {
     background-color: hsl(14, 86%, 42%);
 }
 
-.card-button-1{
+.bg-cream{
+    background-color: #fcf8f5;
+}
+
+
+.product-list {
+    min-width: 300px;
+}
+
+.product-list .card .main-image{
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.product-list .card .card-description{
+    font-size: min(max(1rem, calc(0.2rem + 2vw)), 1.1rem);
+}
+
+.product-list .card .custom-add-btn{
     top: 0;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: white;
     width: max-content;
     border:1px solid hsl(14, 87%, 26%);
+    border-radius: 30px;
+    position: absolute;
 }
 
-.card-button-1:hover{
+.product-list .card .custom-add-btn:hover{
     background-color: white;
     width: max-content;
     border:1px solid hsl(14, 87%, 26%);
 }
 
-
-.sidebar {
-    height: max-content;
-}
-
-.sidebar ul li {
-    border-bottom: 1px solid #cacaca;
-}
-
-
-.sidebar ul li:last-child {
-    border-bottom: none;
-}
-
-.image-container{
-    max-width: 370px;
-}
-
-.icon-container{
+.product-list .card .custom-add-btn img{
     max-width: 20px;
 }
 
-.bg-cream{
-    background-color: #fcf8f5;
+
+.product-list .sidebar {
+    height: max-content;
 }
-.delete-container{
+
+.product-list .sidebar ul li {
+    border-bottom: 1px solid #cacaca;
+}
+
+.product-list .sidebar .icon-container img{
+    max-width: 35px;
+}
+
+.product-list .sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+.product-list .sidebar ul li .custom-delete-btn{
     width: 15px;
     aspect-ratio: 1;
     padding: 0;
+    border: none;
 }
 
-.modal-image-container{
+.product-list .modal{
+    min-width: 280px;
+}
+
+.product-list .modal .cart-container .modal-icon{
+    max-width: 35px;
+}
+
+.product-list .modal .image-container{
     max-width: 44px;
     aspect-ratio: 1;
 }
 
-.modal-min-width{
-    min-width: 280px;
-}
-
-.card-description{
-    font-size: min(max(1rem, calc(0.2rem + 2vw)), 1.1rem);
-}
-
 @media (max-width: 575px) {
-    .cart-container{
+    .product-list{
+        max-width: 350px;
+        margin:0 auto;
+    }
+
+    .product-list .modal .cart-container{
         max-width: 370px;
     }
 }
